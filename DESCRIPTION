@@ -1,0 +1,18 @@
+Package: PCAperm
+Type: Package
+Title: Permutation Test for Principal Components Analysis
+Version: 0.1.0
+Authors@R: person("Shiying", "Xiao",
+                  email = "shiying.xiao@outlook.com",
+                  role = c("aut", "cre"),
+                  comment = c(ORCID = "0000-0002-8846-3258"))
+Maintainer: Shiying Xiao <shiying.xiao@outlook.com>
+Description: Permutation test to estimate the statistical significance of the
+    principal components analysis (PCA).
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

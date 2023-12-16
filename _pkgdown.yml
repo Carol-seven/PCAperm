@@ -1,0 +1,18 @@
+home:
+  title: PCAperm
+  description: Permutation Test for Principal Components Analysis
+
+url: https://github.com/Carol-seven/PCAperm
+
+template:
+  bootstrap: 5
+  opengraph:
+    image:
+      src: https://github.com/Carol-seven/PCAperm/blob/main/man/figure/logo.png
+
+authors:
+  Shiying Xiao:
+    href: http://shiying-xiao.com
+
+development:
+  mode: auto
