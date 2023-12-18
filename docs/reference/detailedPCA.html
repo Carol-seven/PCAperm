@@ -66,11 +66,7 @@ be scaled to have unit variance before the analysis takes place.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A list containing the following components:</p><dl><dt>X</dt>
-<dd><p>The value of the rotated data (the centred (and scaled if requested) data
-multiplied by the rotation matrix).</p></dd>
-
-<dt>sdev</dt>
+<p>A list containing the following components:</p><dl><dt>sdev</dt>
 <dd><p>The standard deviations of the principal components, calculated as the
 square roots of the eigenvalues of the covariance/correlation matrix. The calculation
 is actually done with the singular values of the data matrix.</p></dd>
@@ -83,15 +79,17 @@ singular values of the data matrix.</p></dd>
 <dt>pctvar</dt>
 <dd><p>The percentage of variance explained by each principal component.</p></dd>
 
+<dt>cumvar</dt>
+<dd><p>The cumulative percentage of variance explained by each principal component.</p></dd>
+
 <dt>rotation</dt>
 <dd><p>The matrix of variable loadings (i.e., a matrix whose columns contain
 the eigenvectors).</p></dd>
 
-<dt>indexload</dt>
-<dd><p>The index of loadings for the variables.</p></dd>
-
-<dt>correlation</dt>
-<dd><p>The correlations of the variables with each principal component.</p></dd>
+<dt>score</dt>
+<dd><p>The value of the rotated data (the centred (and scaled if requested) data
+multiplied by the rotation matrix), representing the scores of the supplied data on all
+principal components.</p></dd>
 
 <dt>Psi</dt>
 <dd><p>The Psi index, which depends on the magnitude of the eigenvalues taken from
@@ -104,6 +102,13 @@ where \(\lambda\) is the eigenvalue.</p></dd>
 the variables.
 $$\Phi = \sqrt{\frac{\sum\lambda_i^2-p}{p(p-1)}},$$
 where \(\lambda\) is the eigenvalue, and \(p\) is the number of variables.</p></dd>
+
+<dt>correlation</dt>
+<dd><p>The correlations of the principal components with the variables
+(Jackson, 1991).</p></dd>
+
+<dt>indexload</dt>
+<dd><p>The index of the loadings (Vieira, 2012).</p></dd>
 
 <dt>center</dt>
 <dd><p>The centering used, or <code>FALSE</code>.</p></dd>
@@ -124,6 +129,9 @@ Multivariate Analysis. London, UK: Academic Press.</p></li>
 <li><p>Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988).
 The New S Language. Wadsworth &amp; Brooks/Cole.
 <em>Computer Science Series, Pacific Grove, CA</em>.</p></li>
+<li><p>Jackson, J. Edward. (1991).
+A User's Guide to Principal Components.
+John Wiley &amp; Sons, New York, USA.</p></li>
 <li><p>Vieira, Vasco M. N. C. S. (2012).
 Permutation Tests to Estimate Significances on Principal Components Analysis.
 <em>Computational Ecology and Software</em>, 2(2), 103--123.</p></li>
